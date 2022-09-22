@@ -1,0 +1,43 @@
+totalcachorro=0 
+totalbauru=0 
+totalbauruovo=0 
+totalhamburguer=0 
+totalcheese=0
+totalrefri=0
+print("------------------------------------------------------Cardápio----------------------------------------------------------------------")
+opcoes=int(input("Digite 1 para ver cardápio e 0 para sair"))
+while opcoes !=0:
+    codigo=int(input("Escolha:\n100 - Cachorro quente, 101 - Bauru simples, 102 - Bauru com ovo, 103 - Hamburguer, 104 - Cheeseburguer, 105 - Refrigerante ou 0- para sair"))
+    if codigo==100:
+        print("Cachorro quente selecionado")
+        qtdcachorro=int(input("Selecione a quantidade:"))
+        totalcachorro=1.20*qtdcachorro 
+    elif opcoes==101:
+        print("Bauru simples selecionado")
+        qtdbauru=int(input("Selecione a quantidade:"))
+        totalbauru=1.30*qtdbauru
+    elif opcoes==102:
+        print("Bauru com ovo selecionado")
+        qtdbauruovo=int(input("Selecione a quantidade:"))
+        totalbauruovo=1.50*qtdbauruovo
+    elif opcoes==103:
+        print("Hamburguer selecionado")
+        qtdhamburguer=int(input("Selecione a quantidade:"))
+        totalhamburguer=1.20*qtdhamburguer
+    elif opcoes==104:
+        print("Cheeseburguer selecionado")
+        qtdcheese=int(input("Selecione a quantidade:"))
+        totalcheese=1.30*qtdcheese
+    elif opcoes==105:
+        print("Refrigerante selecionado")
+        qtdrefri=int(input("Selecione a quantidade:"))
+        totalrefri=1*qtdrefri
+    elif opcoes==0:
+        break
+    else:
+        print("Opção inválida")
+totalgeral=totalcachorro+totalbauru+totalbauruovo+totalhamburguer+totalcheese+totalrefri    
+print(f"Total: {totalgeral:.2f}")
+    
+    
+    
