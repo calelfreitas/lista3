@@ -1,0 +1,33 @@
+votos=1
+candidato1=0
+candidato2=0
+candidato3=0
+nulo=0
+branco=0
+while votos>0:
+    candidatos=int(input("Escolha seu candidato: 1 - João, 2 - Rosana, 3 - Luiz, 4 - Voto nulo, 5 - Voto em branco 0 - Encerrar votação"))
+    if candidatos==1:
+        print("Você votou no primeiro candidato, João")
+        candidato1=candidato1+1
+    elif candidatos==2:
+        print("Você votou no segundo candidato, Rosana")
+        candidato2=candidato2+1 
+    elif candidatos==3:
+        print("Você votou no terceito candidato, Luiz")
+        candidato3=candidato3+1 
+    elif candidatos==4:
+        print("Você anulou seu voto")
+        nulo=nulo+1
+    elif candidatos==5:
+        print("Eleitor não compareceu.Voto em branco.")
+        branco=branco+1
+    elif candidatos==0:
+        print("Você encerrou a votação")
+        break
+totalvotos=candidato1+candidato2+candidato3+nulo+branco
+totalpercentualnulos=(nulo*100)/totalvotos
+totalpercentualbrancos=(branco*100)/totalvotos
+print(f"Total de votos: {totalvotos}")
+print(f"O total de votos para cada candidato:\n1ºCandidato:{candidato1}\n2ºCandidato:{candidato2}\n3ºCandidato:{candidato3}\nVotos nulos:{nulo}\nVotos em branco:{branco}")
+print(f"Percentual de votos nulos sobre o total de votos: {totalpercentualnulos:.2f}%")
+print(f"Percentual de votos nulos sobre o total de votos: {totalpercentualbrancos:.2f}%")
