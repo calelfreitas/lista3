@@ -1,0 +1,25 @@
+"""Questao1"""
+lista1=[]
+lista2=[]
+lista3=[]
+lista4=[]
+numero=0
+while numero<=0 and numero<=100:
+    numero=int(input("Digite um número:"))
+    if numero<0:
+        print("Comando inválido")
+        break
+    elif numero>0 and numero<=25:
+        lista1.append(numero)
+    elif numero>25 and numero<=50:
+        lista2.append(numero)
+    elif numero>50 and numero<=75:
+        lista3.append(numero)
+    elif numero>75 and numero<=100:
+        lista4.append(numero)
+    else:
+        break
+print("Há ",len(lista1),"números entre votos 0 e 25." )
+print("Há ",len(lista2),"números entre votos 26 e 50." )
+print("Há ",len(lista3),"números entre votos 51 e 75." )
+print("Há ",len(lista4),"números entre votos 76 e 100." )
