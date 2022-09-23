@@ -1,0 +1,44 @@
+totalunos=0
+totnotas=0
+repeticao=1 
+while repeticao!=0:
+    acertos=0
+    for i in range(1,11):
+        resposta=input("Digite a alternativa da questão "+ str(i))
+        if i==1:
+            if str(resposta)=='A' and str(resposta)=='a':
+                acertos=acertos+1
+        elif i==2:
+            if str(resposta)=='B' and str(resposta)=='b':
+                acertos=acertos+1
+        elif i==3:
+            if str(resposta)=='C' and str(resposta)=='c':
+                acertos=acertos+1
+        elif i==4:
+            if str(resposta)=='D' and str(resposta)=='d':
+                acertos=acertos+1
+        elif i==5:
+            if str(resposta)=='E' and str(resposta)=='e':
+                acertos=acertos+1
+        elif i==6:
+            if str(resposta)=='E' and str(resposta)=='e':
+                acertos=acertos+1
+        elif i==7:
+            if str(resposta)=='D' and str(resposta)=='d':
+                acertos=acertos+1
+        elif i==8:
+            if str(resposta)=='C' and str(resposta)=='c':
+                acertos=acertos+1
+        elif i==9:
+            if str(resposta)=='B' and str(resposta)=='b':
+                acertos=acertos+1
+        elif i==10:
+            if str(resposta)=='A' and str(resposta)=='a':
+                acertos=acertos+1
+                break
+    
+totalunos=totalunos+1
+totnotas=totnotas=acertos+1 
+media=totnotas/acertos
+print(f"Acertos: {acertos}")
+print(f"Nota: {media}")
