@@ -1,0 +1,29 @@
+while True:
+    qtd=int(input("Digite a quantidade de ginastas: "))
+    for i in range(qtd):
+        notas=[]
+        j=1
+        g=1
+        nomeginasta=input("Nome do(a) ginasta: ")
+        if nomeginasta != '':
+            for i in range(7):
+                notasalto=float(input(f"Digite a nota do {j}º jurado:"))
+                notas.append(notasalto)
+                j=j+1
+                cont=0
+            print("Atleta n°", g, "\n", nomeginasta)
+            for i in range(7):
+                print(f"{j}ºjurado: ", notas[cont] )
+                j+j+1 
+                g=g+1
+            print(f"Ginasta:{nomeginasta}")
+            print(f"Notas:{notas}")
+            print("Maior nota:", max(notas))
+            print("Menor nota:", min(notas))
+            notas.remove(max(notas))
+            notas.remove(min(notas))
+            media = sum(notas)/len(notas)
+            print(f"Notas finais:{notas}")
+            print(f"{nomeginasta}.\nResultado:",round(media,2))
+        elif nomeginasta == '':
+            break
