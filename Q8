@@ -1,0 +1,25 @@
+modelos=[]
+consumos=[]
+for i in range(5):
+    veiculo=input("Digite o veículo:")
+    modelos.append(veiculo)
+    consumo=float(input("Digite o consumo do veículo:"))
+    consumos.append(consumo)
+    c=0
+    custo=0
+    gasto=0
+    menorveiculo=''
+    maior=0
+    for m in modelos:
+        custo=(1000/consumos[c])
+        gasto=custo*2.25
+    print(f"Modelos:{m}\nConsumo:{custo}\nGasto:{gasto:.2f}")
+    if c==0:
+        menor=custo
+        menorveiculo=m
+    elif menor<custo:
+        menor=custo
+        menorveiculo=m 
+        c=c+1 
+rint(f"Os modelos:{modelos[m]}")
+print(f"O menor consumo é:{menorveiculo}")
