@@ -1,0 +1,25 @@
+while True:
+    salarios=[]
+    qtd=int(input("Entre com a quantidade de colaboradores"))
+    for i in range(qtd):
+        salario=float(input("Digite o salário em R$: "))
+        salarios.append(salario)
+        if salario>0:
+            abonos=0
+            min=0
+            max=0
+            for i in salarios:
+                abono = (salario*20)/100
+                if abono<=100:
+                    abono=100
+                    min=min+1
+                elif abono>100:
+                    max=abono
+                    abonos=abono+1 
+        elif salario==0:
+            break
+    print("Foram processados colaboradores:", len(salarios))
+    print("Total gasto com abonos: R$", abonos)
+    print("Valor mínimo pago a colaboradores:", min)
+    print('Maior valor de abono pago: R$', max)
+    
