@@ -1,0 +1,33 @@
+while True:
+    mousses=[]
+    qtdmousses=0
+    for i in range (1,200):
+        mousse=int(input("Digite o número de identificação do ",i,"ºmousse:"))
+        mousses.append(mousse)
+        qtdmousses=qtdmousses+1
+        defeito=input("O mousse possui defeito? s-sim ou n-não")
+    if defeito=='s':
+        tipodefeito=int(input("Tipo de defeito: 1-Necessita da esfera, 2-Necessita de limpeza, 3-Necessita troca de cabo ou conector, 4-Quebrado ou inutilizado:"))
+        if tipodefeito==1:
+            qtdesf=qtdesf+1
+        elif tipodefeito==2:
+            qtdlimp=qtdlimp+1
+        elif tipodefeito==3:
+            qtdcabo=qtdcabo+1
+        elif tipodefeito==4:
+            qtdqueb=qtdqueb+1
+    escolha=input("Deseja continuar?s-Sim ou n-Não:")
+    if escolha=='s':
+        continue
+    else:
+        break
+percesf=(100*qtdesf)/qtdmousses
+perclimp=(100*qtdlimp)/qtdmousses
+perctroca=(100*qtdcabo)/qtdmousses
+percqueb=(100*qtdqueb)/qtdmousses
+print(f"Total mousses:", len(mousses))
+print(" |      Situação        |      Quantidade     |     Percentual   |")
+print(f"| Necessita da esfera  |       {qtdesf}      |     {percesf}%   |")
+print(f"| Necessita da esfera  |       {qtdlimp}     |    {perclimp}%   |")
+print(f"| Necessita da esfera  |       {qtdcabo}     |    {perctroca}%  |")
+print(f"| Necessita da esfera  |       {qtdqueb}     |     {percqueb}%  |")
